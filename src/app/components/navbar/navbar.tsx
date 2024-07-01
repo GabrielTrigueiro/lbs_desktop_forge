@@ -5,7 +5,7 @@ import Menu from "@mui/material/Menu";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { useAppDispatch, useAppSelector } from "core/hooks/reduxHooks";
+import { useAppDispatch, useAppSelector } from "../../../core/hooks/reduxHooks";
 import { logout } from "../../../core/redux/slices/authSlice";
 import { useLocation, useNavigate } from "react-router-dom";
 import { NavBarBox, StyledAppBar, StyledToolBar, TypographyNav, UserMenu } from "./styles";
@@ -35,9 +35,9 @@ function Navbar() {
   } else {
     urlPart = 'Home';
   }
-useEffect (()=> {
-  console.log(basicUserInfo)
-},[basicUserInfo])
+  useEffect(() => {
+    console.log(basicUserInfo)
+  }, [basicUserInfo])
   // * menu actions
   const handleMenuAction = async (action: "logout" | "editUser") => {
     setAnchorElUser(null);
@@ -55,7 +55,7 @@ useEffect (()=> {
     }
   };
 
-  if(location.pathname === "/venda"){
+  if (location.pathname === "/venda") {
     return null
   }
 

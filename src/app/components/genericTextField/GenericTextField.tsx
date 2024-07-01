@@ -16,7 +16,7 @@ import {
 type TDefaultTextField<T> = {
   name: string;
   label: string;
-  value: T;
+  value: any;
   props?: InputProps & TextFieldProps;
   small?: boolean;
   error?: boolean | undefined;

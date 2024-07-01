@@ -1,6 +1,6 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import styled from "styled-components";
-import theme from "theme";
+import theme from "../../../theme";
 
 export const Container = styled(Grid)`
   padding: 1em;

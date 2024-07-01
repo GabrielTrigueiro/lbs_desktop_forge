@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios';
 import { BrandService } from '../../../core/api/brand/brandService';
 import { TBrandBody, TBrandUpdate } from '../../../core/models/brand';
-import { deepEqual } from '../../..//utils/globalFunctions';
+import { deepEqual } from '../../../core/utils/globalFunctions';
 import { Validations } from '../../../core/utils/validations';
 import { useFormik } from 'formik';
 import React, { useEffect, useState } from 'react'

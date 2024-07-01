@@ -16,11 +16,11 @@ import {
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { EditUserBox } from "./styles";
-import { TEdit } from "core/models/user";
+import { TEdit } from "../../../core/models/user";
 import {
   removeExtraSpaces,
   removeNonNumeric,
-} from "core/utils/globalFunctions";
+} from "../../../core/utils/globalFunctions";
 
 function EditUser() {
   const [showPassword, setShowPassword] = useState(false);
@@ -67,9 +67,9 @@ function EditUser() {
   const areValuesEqual = (): boolean => {
     return (
       removeExtraSpaces(basicUserInfo?.name) ===
-        removeExtraSpaces(formik.values.name) &&
+      removeExtraSpaces(formik.values.name) &&
       removeNonNumeric(basicUserInfo?.login) ===
-        removeNonNumeric(formik.values.login) &&
+      removeNonNumeric(formik.values.login) &&
       formik.values.password === ""
     );
   };
@@ -109,100 +109,100 @@ function EditUser() {
   return (
     <form onSubmit={formik.handleSubmit}>
       <PageContentContainer>
-      <ContainerCard>
-        <StyledCardHeader title={"Meus dados"} />
-        <Divider />
-        <StyledCardContent sx={{ flexDirection: "column" }}>
-          <EditUserBox>
-            <FormColumn>
-              <GenericTextField<string>
-                props={{
-                  fullWidth: true,
-                  onChange: formik.handleChange,
-                }}
-                value={formik.values.name}
-                label="Nome"
-                name="name"
-              />
-              <GenericTextField<string>
-                props={{
-                  fullWidth: true,
-                  onChange: formik.handleChange,
-                }}
-                value={formik.values.login}
-                label="Login"
-                name="login"
-              />
-            </FormColumn>
-            <FormColumn>
-              <GenericTextField<string>
-                props={{
-                  type: showPassword ? "text" : "password",
-                  fullWidth: true,
-                  onChange: formik.handleChange,
-                  InputProps: {
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="toggle password visibility"
-                          onClick={togglePassword}
-                          edge="end"
-                        >
-                          {showPassword ? (
-                            <VisibilityIcon />
-                          ) : (
-                            <VisibilityOffIcon />
-                          )}
-                        </IconButton>
-                      </InputAdornment>
-                    ),
-                  },
-                }}
-                value={formik.values.password}
-                label="Nova senha"
-                name="password"
-                error={!!formik.errors.password}
-                helperText={formik.errors.password}
-              />
-              <GenericTextField<string>
-                props={{
-                  type: showPasswordConfirm ? "text" : "password",
-                  fullWidth: true,
-                  onChange: (e) => setRepeatPass(e.target.value as string),
-                  InputProps: {
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="toggle password visibility"
-                          onClick={togglePasswordConfirm}
-                          edge="end"
-                        >
-                          {showPasswordConfirm ? (
-                            <VisibilityIcon />
-                          ) : (
-                            <VisibilityOffIcon />
-                          )}
-                        </IconButton>
-                      </InputAdornment>
-                    ),
-                  },
-                }}
-                value={repeatPass}
-                label="Repita a senha"
-                name="repeatPass"
-                error={!!formik.errors.password}
-                helperText={formik.errors.password}
-              />
-            </FormColumn>
-          </EditUserBox>
-          <Button
-            sx={{ width: 120, height: 35 }}
-            disabled={areValuesEqual() || isLoading}
-          >
-            {isLoading ? <Spinner size={4} state={isLoading} /> : "Atualizar"}
-          </Button>
-        </StyledCardContent>
-      </ContainerCard>
+        <ContainerCard>
+          <StyledCardHeader title={"Meus dados"} />
+          <Divider />
+          <StyledCardContent sx={{ flexDirection: "column" }}>
+            <EditUserBox>
+              <FormColumn>
+                <GenericTextField<string>
+                  props={{
+                    fullWidth: true,
+                    onChange: formik.handleChange,
+                  }}
+                  value={formik.values.name}
+                  label="Nome"
+                  name="name"
+                />
+                <GenericTextField<string>
+                  props={{
+                    fullWidth: true,
+                    onChange: formik.handleChange,
+                  }}
+                  value={formik.values.login}
+                  label="Login"
+                  name="login"
+                />
+              </FormColumn>
+              <FormColumn>
+                <GenericTextField<string>
+                  props={{
+                    type: showPassword ? "text" : "password",
+                    fullWidth: true,
+                    onChange: formik.handleChange,
+                    InputProps: {
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={togglePassword}
+                            edge="end"
+                          >
+                            {showPassword ? (
+                              <VisibilityIcon />
+                            ) : (
+                              <VisibilityOffIcon />
+                            )}
+                          </IconButton>
+                        </InputAdornment>
+                      ),
+                    },
+                  }}
+                  value={formik.values.password}
+                  label="Nova senha"
+                  name="password"
+                  error={!!formik.errors.password}
+                  helperText={formik.errors.password}
+                />
+                <GenericTextField<string>
+                  props={{
+                    type: showPasswordConfirm ? "text" : "password",
+                    fullWidth: true,
+                    onChange: (e) => setRepeatPass(e.target.value as string),
+                    InputProps: {
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={togglePasswordConfirm}
+                            edge="end"
+                          >
+                            {showPasswordConfirm ? (
+                              <VisibilityIcon />
+                            ) : (
+                              <VisibilityOffIcon />
+                            )}
+                          </IconButton>
+                        </InputAdornment>
+                      ),
+                    },
+                  }}
+                  value={repeatPass}
+                  label="Repita a senha"
+                  name="repeatPass"
+                  error={!!formik.errors.password}
+                  helperText={formik.errors.password}
+                />
+              </FormColumn>
+            </EditUserBox>
+            <Button
+              sx={{ width: 120, height: 35 }}
+              disabled={areValuesEqual() || isLoading}
+            >
+              {isLoading ? <Spinner size={4} state={isLoading} /> : "Atualizar"}
+            </Button>
+          </StyledCardContent>
+        </ContainerCard>
       </PageContentContainer>
     </form>
   );

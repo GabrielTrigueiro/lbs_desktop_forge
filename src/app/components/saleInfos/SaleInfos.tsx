@@ -14,7 +14,7 @@ import {
     SET_FIXED_DISCOUNT,
     SET_NAME, SET_PERCENTAGE_DISCOUNT,
     SET_SALE_REQUEST, setPaymentMethodNames, setPaymentToSale,
-} from "core/redux/slices/saleSlice/saleSlice";
+} from "../../../core/redux/slices/saleSlice/saleSlice";
 import { TPaymentOption } from "../../../core/models/sale";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -35,7 +35,7 @@ import {
 import { Box } from "@mui/system";
 import { IPage, IResponseBody } from "../../../core/models/utils";
 import * as React from "react";
-import { TPaymentMethodSale } from "app/views/sale/sale";
+import { TPaymentMethodSale } from "../../../app/views/sale/sale";
 import html2pdf from "html2pdf.js";
 import { CupomFiscal } from "../cupomFiscal/CupomFiscal";
 import DefaultDialog from "../defaultDialog/defaultDialog";

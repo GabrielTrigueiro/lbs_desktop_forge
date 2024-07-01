@@ -1,4 +1,4 @@
-import { TSupplierBody, TSupplierRegister, TUpdateSupplier } from "core/models/supplier";
+import { TSupplierBody, TSupplierRegister, TUpdateSupplier } from "../../../core/models/supplier";
 import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -37,9 +37,9 @@ const EditSupplier = () => {
         setIsLoading(true)
 
         let cleanedSupplierUser: TUpdateSupplier = {
-        cpforcnpj: removeNonNumeric(updatedUser.cpforcnpj) ?? "",
-        nameCompany: updatedUser.nameCompany,
-        nameRepresentative: updatedUser.nameRepresentative
+            cpforcnpj: removeNonNumeric(updatedUser.cpforcnpj) ?? "",
+            nameCompany: updatedUser.nameCompany,
+            nameRepresentative: updatedUser.nameRepresentative
 
         };
         if (supplier?.id) {
@@ -133,7 +133,7 @@ const EditSupplier = () => {
                     </InfoCardContainer>
                 </Box>
                 <Box sx={{ gap: " 1rem", display: "flex", flexDirection: "row" }}>
-                    <Button disabled={ isLoading || isValidating} onClick={() => navigate("/fornecedores")} variant="outlined">
+                    <Button disabled={isLoading || isValidating} onClick={() => navigate("/fornecedores")} variant="outlined">
                         Voltar
                     </Button>
                     <Button disabled={!hasChanges() || isLoading || isValidating}

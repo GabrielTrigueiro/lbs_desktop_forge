@@ -1,4 +1,4 @@
-import { Notification } from "app/components/toastNotification/toastNotification";
+import { Notification } from "../../../app/components/toastNotification/toastNotification";
 import { AxiosError } from "axios";
 import { SupplierService } from "../../../core/api/supplier/supplierService";
 import { TSupplierRegister } from "../../../core/models/supplier";

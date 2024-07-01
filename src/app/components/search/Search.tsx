@@ -48,7 +48,7 @@ function Search({ onChange, searchPlaceHolder, querrySearching, cpf }: Readonly<
       <SearchInput
         type="text"
         value={query}
-        onChange={event => {
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           setQuery(event.target.value);
         }}
         autoComplete="off"

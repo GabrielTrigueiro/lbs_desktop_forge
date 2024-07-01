@@ -1,4 +1,4 @@
-import { TCollaboratorBody, TCollaboratorUpdate } from "core/models/collaborator";
+import { TCollaboratorBody, TCollaboratorUpdate } from "../../../core/models/collaborator";
 import { Validations } from "../../../core/utils/validations";
 import { getIn, useFormik } from "formik";
 import { useEffect, useState } from "react";
@@ -238,7 +238,7 @@ const EditCollaborator = () => {
           </InfoCardContainer>
         </Box>
         <Box sx={{ gap: " 1rem", display: "flex", flexDirection: "row" }}>
-          <Button disabled={ isLoading || isValidating} onClick={() => navigate("/colaboradores")} variant="outlined">
+          <Button disabled={isLoading || isValidating} onClick={() => navigate("/colaboradores")} variant="outlined">
             Voltar
           </Button>
           <Button disabled={!hasChanges() || isLoading} onClick={() => formik.handleSubmit()}>Editar</Button>

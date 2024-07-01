@@ -1,12 +1,12 @@
 import DefaultModal from "../../defaultModal/defaultModal";
 import { InfoValue, PaymentList, PaymentListContainer, PaymentSection } from "../styles";
 import { InfoCard, InfoCardContainer, InfoCardTitle, InfoKey, InfoRow, InfosSection } from "../../../../../app/components/styles";
-import { formatCurrencyBR, formatDateBr } from "core/utils/globalFunctions";
+import { formatCurrencyBR, formatDateBr } from "../../../../../core/utils/globalFunctions";
 import { Box, CircularProgress } from "@mui/material";
-import { TProductBody } from "core/models/product";
-import theme from "core/theme/theme";
+import { TProductBody } from "../../../../../core/models/product";
+import theme from "../../../../../core/theme/theme";
 import { useEffect, useState } from "react";
-import { ProductService } from "core/api/product/productService";
+import { ProductService } from "../../../../../core/api/product/productService";
 import CaracteristicsInfo from "./caracteristicsInfo";
 
 interface TProductDetailsProps {
