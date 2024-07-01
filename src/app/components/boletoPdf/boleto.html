@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <style>
+    td.BoletoCodigoBanco {
+      font-size: 4m;
+      font-family: arial, verdana;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+      vertical-align: bottom;
+      border-bottom: 0.15mm solid #000000;
+      border-right: 0.15mm solid #000000;
+      padding-bottom: 2mm;
+    }
+    td.BoletoLogo {
+      border-bottom: 0.15mm solid #000000;
+      border-right: 0.15mm solid #000000;
+      text-align: center;
+      height: 9mm;
+    }
+    td.BoletoLinhaDigitavel {
+      font-size: 4mm;
+      font-family: arial, verdana;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: bottom;
+      border-bottom: 0.15mm solid #000000;
+      padding-bottom: 2mm;
+    }
+    td.BoletoTituloEsquerdo {
+      font-size: 0.2cm;
+      font-family: arial, verdana;
+      padding-left: 0.15mm;
+      border-right: 0.15mm solid #000000;
+      text-align: left;
+    }
+    td.BoletoTituloDireito {
+      font-size: 2mm;
+      font-family: arial, verdana;
+      padding-left: 0.15mm;
+      text-align: left;
+    }
+    td.BoletoValorEsquerdo {
+      font-size: 3mm;
+      font-family: arial, verdana;
+      text-align: center;
+      border-right: 0.15mm solid #000000;
+      font-weight: bold;
+      border-bottom: 0.15mm solid #000000;
+      padding-top: 0.5mm;
+    }
+    td.BoletoValorDireito {
+      font-size: 3mm;
+      font-family: arial, verdana;
+      text-align: right;
+      padding-right: 3mm;
+      padding-top: 0.8mm;
+      border-bottom: 0.15mm solid #000000;
+      font-weight: bold;
+    }
+    td.BoletoTituloSacado {
+      font-size: 2mm;
+      font-family: arial, verdana;
+      padding-left: 0.15mm;
+      vertical-align: top;
+      padding-top: 0.15mm;
+      text-align: left;
+    }
+    td.BoletoValorEsquerdoCorpo {
+      font-size: 3mm;
+      font-family: arial, verdana;
+      text-align: center;
+      border-right: 0.15mm solid #000000;
+      font-weight: bold;
+      padding-top: 0.5mm;
+      text-align: left;
+    }
+    td.BoletoValorSacado {
+      font-size: 3mm;
+      font-family: arial, verdana;
+      font-weight: bold;
+      text-align: left;
+    }
+    td.BoletoTituloSacador {
+      font-size: 2mm;
+      font-family: arial, verdana;
+      padding-left: 0.15mm;
+      vertical-align: bottom;
+      padding-bottom: 0.8mm;
+      border-bottom: 0.15mm solid #000000;
+    }
+    td.BoletoValorSacador {
+      font-size: 3mm;
+      font-family: arial, verdana;
+      vertical-align: bottom;
+      padding-bottom: 0.15mm;
+      border-bottom: 0.15mm solid #000000;
+      font-weight: bold;
+      text-align: left;
+    }
+    td.BoletoPontilhado {
+      border-bottom: 0.1mm solid #626161;
+      /* Ajuste a largura e a cor dos pontos conforme necessário */
+      font-size: 0.01px;
+      /* Ajuste o tamanho da fonte para reduzir o espaçamento */
+      /* margin-top: 1px;
+  margin-bottom: 10px; */
+      padding-bottom: 10px;
+      padding-top: 5px;
+    }
+    .BoletoPontilhado {
+      border-bottom: 0.1mm solid #626161;
+      /* Ajuste a largura e a cor dos pontos conforme necessário */
+      font-size: 0.01px;
+      /* Ajuste o tamanho da fonte para reduzir o espaçamento */
+      /* margin-top: 1px;
+  margin-bottom: 10px; */
+      padding-bottom: 10px;
+      padding-top: 5px;
+    }
+    ul.BoletoInstrucoes {
+      font-size: 3mm;
+      font-family: verdana, arial;
+    }
+    .creditos {
+      font-size: 3mm;
+      font-family: arial, verdana;
+      margin-top: 2px;
+      padding-top: 3px;
+      text-align: right;
+    }
+    .ambiente {
+      color: #9e1a1a;
+    }
+    .Pontilhado {
+      border-bottom: 0.1mm dashed #626161;
+      /* Ajuste a largura e a cor dos pontos conforme necessário */
+      font-size: 0.01px;
+      /* Ajuste o tamanho da fonte para reduzir o espaçamento */
+      /* margin-top: 1px;
+  margin-bottom: 10px; */
+      padding-bottom: 2px;
+      padding-top: 2px;
+    }
+  </style>
+  <body>
+    <table cellspacing="0" cellpadding="0" border="0" class="Boleto">
+      <!-- recibo -->
+      <tr>
+        <td colspan="11" class="BoletoPontilhado">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="BoletoLogo">
+          <!-- logo aqui -->
+          <img src="/src/images/assets/logoBb.jpeg" alt="Minha Imagem" width="180">
+        </td>
+        <td colspan="3" class="BoletoCodigoBanco">341-7</td>
+        <td colspan="6" class="BoletoLinhaDigitavel">
+          34191.09008 63571.277447 71830.000008 5 00000000000000
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="10" class="BoletoTituloEsquerdo">
+          Nome do Pagador / Endereço
+        </td>
+        <td class="BoletoTituloDireito">Data de Vencimento</td>
+      </tr>
+
+      <tr>
+        <td colspan="10" class="BoletoValorEsquerdoCorpo">nome</td>
+        <td class="BoletoValorDireito">data de vencimento</td>
+      </tr>
+      <tr>
+        <td colspan="10" class="BoletoValorEsquerdoCorpo">endereço 1</td>
+        <td class="BoletoTituloDireito">Agência/Código do Beneficiário</td>
+      </tr>
+      <tr>
+        <td style="text-align: left" colspan="10" class="BoletoValorEsquerdo">
+          cpf
+        </td>
+        <td class="BoletoValorDireito">Agência/Código do Beneficiário</td>
+      </tr>
+
+      <tr>
+        <td colspan="10" class="BoletoTituloEsquerdo">
+          Nome do Beneficiário / Endereço
+        </td>
+        <td class="BoletoTituloDireito">Nosso numero</td>
+      </tr>
+
+      <tr>
+        <td colspan="10" class="BoletoValorEsquerdoCorpo">nome</td>
+        <td class="BoletoValorDireito">Nosso numero</td>
+      </tr>
+      <tr>
+        <td colspan="10" class="BoletoValorEsquerdoCorpo">endereço 1</td>
+        <td class="BoletoTituloDireito">Valor do Documento</td>
+      </tr>
+      <tr>
+        <td style="text-align: left" colspan="10" class="BoletoValorEsquerdo">
+          CNPJ
+        </td>
+        <td class="BoletoValorDireito">Valor do Documento</td>
+      </tr>
+
+      <tr>
+        <td colspan="3" class="BoletoTituloEsquerdo">Uso do Banco</td>
+        <td colspan="4" class="BoletoTituloEsquerdo">Nº do Documento</td>
+        <td class="BoletoTituloEsquerdo">Espécie Doc</td>
+        <td class="BoletoTituloEsquerdo">Aceite</td>
+        <td class="BoletoTituloEsquerdo">Data do Processamento</td>
+        <td class="BoletoTituloDireito">(=) Valor Pago</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="BoletoValorEsquerdo"></td>
+        <td colspan="4" class="BoletoValorEsquerdo">123456789</td>
+        <td class="BoletoValorEsquerdo">DM</td>
+        <td class="BoletoValorEsquerdo">N</td>
+        <td class="BoletoValorEsquerdo">10/10/2021</td>
+        <td class="BoletoValorDireito">123456789</td>
+      </tr>
+
+      <tr>
+        <td
+          colspan="11"
+          class="BoletoTituloDireito"
+          style="text-align: right; padding-right: 0.1cm"
+        >
+          Autenticação Mecânica - Ficha de Compensação
+        </td>
+      </tr>
+      <tr>
+        <td colspan="11" class="Pontilhado"></td>
+      </tr>
+
+      <!-- boleto -->
+      <tr>
+        <td colspan="11" class="BoletoPontilhado">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="BoletoLogo">
+          <img src="/src/images/assets/logoBb.jpeg" alt="Minha Imagem" width="180">
+        </td>
+        <td colspan="3" class="BoletoCodigoBanco">341-7</td>
+        <td colspan="6" class="BoletoLinhaDigitavel">
+          34191.09008 63571.277447 71830.000008 5 00000000000000
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="10" class="BoletoTituloEsquerdo">Local de Pagamento</td>
+        <td class="BoletoTituloDireito">Data de Vencimento</td>
+      </tr>
+      <tr>
+        <td colspan="10" class="BoletoValorEsquerdo">Local de Pagamento</td>
+        <td class="BoletoValorDireito">Data de Vencimento</td>
+      </tr>
+
+      <tr>
+        <td colspan="10" class="BoletoTituloEsquerdo">Nome do Benceficiário</td>
+        <td class="BoletoTituloDireito">Agência/Código do Beneficiário</td>
+      </tr>
+      <tr>
+        <td colspan="10" class="BoletoValorEsquerdo">Nome do Benceficiário</td>
+        <td class="BoletoValorDireito">Agência/Código do Beneficiário</td>
+      </tr>
+
+      <tr>
+        <td colspan="3" class="BoletoTituloEsquerdo">Data do Documento</td>
+        <td colspan="4" class="BoletoTituloEsquerdo">Número do Documento</td>
+        <td class="BoletoTituloEsquerdo">Espécie Doc</td>
+        <td class="BoletoTituloEsquerdo">Aceite</td>
+        <td class="BoletoTituloEsquerdo">Data do Processamento</td>
+        <td class="BoletoTituloDireito">Nosso Número</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="BoletoValorEsquerdo">10/10/2021</td>
+        <td colspan="4" class="BoletoValorEsquerdo">123456789</td>
+        <td class="BoletoValorEsquerdo">DM</td>
+        <td class="BoletoValorEsquerdo">N</td>
+        <td class="BoletoValorEsquerdo">10/10/2021</td>
+        <td class="BoletoValorDireito">123456789</td>
+      </tr>
+
+      <tr>
+        <td colspan="3" class="BoletoTituloEsquerdo">Uso do Banco</td>
+        <td colspan="2" class="BoletoTituloEsquerdo">Carteira</td>
+        <td colspan="2" class="BoletoTituloEsquerdo">Espécie</td>
+        <td colspan="2" class="BoletoTituloEsquerdo">Quantidade</td>
+        <td class="BoletoTituloEsquerdo">(x) Valor</td>
+        <td class="BoletoTituloDireito">(=) Valor do Documento</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="BoletoValorEsquerdo">&nbsp;</td>
+        <td colspan="2" class="BoletoValorEsquerdo">123</td>
+        <td colspan="2" class="BoletoValorEsquerdo">R$</td>
+        <td colspan="2" class="BoletoValorEsquerdo">&nbsp;</td>
+        <td class="BoletoValorEsquerdo">&nbsp;</td>
+        <td class="BoletoValorDireito">R$ 100,00</td>
+      </tr>
+
+      <tr>
+        <td colspan="10" class="BoletoTituloEsquerdo">
+          Informações de Responsabilidade do Benefíciario:
+        </td>
+        <td class="BoletoTituloDireito">(-) Desconto/Abatimento</td>
+      </tr>
+      <tr>
+        <td
+          colspan="10"
+          rowspan="5"
+          class="BoletoValorEsquerdo"
+          style="text-align: left; vertical-align: top; padding-left: 0.1cm"
+        >
+          JRS: Vl p/Dia Atraso R$0,10 A PARTIR DE data de vencimento
+          <br></br>
+          MULTA DE R$ 3,00 APARTIR DE data de vencimento
+          <br></br>
+          APÓS 30 DIAS DE VENCIMENTO, SEU NOME SERÁ NEGATIVADO
+        </td>
+        <td class="BoletoValorDireito">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="BoletoTituloDireito">(+)Juros/Multa</td>
+      </tr>
+      <tr>
+        <td class="BoletoValorDireito">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="BoletoTituloDireito">(=) Valor Cobrado</td>
+      </tr>
+      <tr>
+        <td class="BoletoValorDireito">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="10" rowspan="1" class="BoletoTituloSacado">
+          Nome do Pagador / Endereço
+        </td>
+        <td rowspan="1" class="BoletoTituloSacado">CPF:</td>
+      </tr>
+      <tr>
+        <td colspan="10" class="BoletoValorSacado">
+          Rua do Sacado, 123 - Bairro do Sacado
+        </td>
+        <td colspan="" class="BoletoValorSacado">
+          Rua do Sacado, 123 - Bairro do Sacado
+        </td>
+      </tr>
+      <tr>
+        <td colspan="10" class="BoletoValorSacado">
+          Cidade do Sacado - UF&nbsp;&nbsp;&nbsp;00000-000
+        </td>
+      </tr>
+      <tr>
+        <td colspan="10" class="BoletoTituloSacador">Beneficiário final</td>
+        <td colspan="" class="BoletoTituloSacador">CPF/CNPJ</td>
+      </tr>
+      <tr>
+        <td
+          colspan="11"
+          class="BoletoTituloDireito"
+          style="text-align: right; padding-right: 0.1cm"
+        >
+          Autenticação Mecânica - Ficha de Compensação
+        </td>
+      </tr>
+      <tr>
+        <td colspan="11" height="60" valign="top">" . $barra . "</td>
+      </tr>
+    </table>
+  </body>
+</html>
