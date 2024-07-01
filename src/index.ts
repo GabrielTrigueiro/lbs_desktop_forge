@@ -12,12 +12,32 @@ const createWindow = (): void => {
     width: 800,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+      contextIsolation: true,
+      webSecurity: true,
     },
   });
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   mainWindow.webContents.openDevTools();
+
+  // Configuração da Content Security Policy
+  mainWindow.webContents.session.webRequest.onHeadersReceived(
+    (details, callback) => {
+      callback({
+        responseHeaders: {
+          ...details.responseHeaders,
+          "Content-Security-Policy": [
+            "default-src 'self' 'unsafe-inline' data:;",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval';",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;",
+            "font-src 'self' data: https://fonts.gstatic.com;",
+            "connect-src 'self' https://api.lbs-new.bitbeelabs.tech;",
+          ].join(" "),
+        },
+      });
+    }
+  );
 };
 
 app.on("ready", createWindow);

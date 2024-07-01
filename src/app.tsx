@@ -15,8 +15,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const query = new QueryClient();
 
-const container = document.getElementById("root");
-const root = createRoot(container as HTMLElement);
+const root = createRoot(document.body);
 
 root.render(
   <React.StrictMode>

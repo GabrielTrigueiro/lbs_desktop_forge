@@ -77,7 +77,7 @@ function Router() {
         <Route path="/venda" element={<Sale />} />
       </Route>
 
-      {/* <Route path="*" element={<Navigate to="/login"/>}/> */}
+      <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
 }
