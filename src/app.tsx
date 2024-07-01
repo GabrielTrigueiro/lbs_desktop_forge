@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material";
 import FullScreenContainer from "../src/app/components/layout/layout";
 import React from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PositivoTheme from "./theme";
@@ -24,11 +24,11 @@ root.render(
         <PersistGate loading={null} persistor={persistor}>
           <Provider store={store}>
             <ToastContainer />
-            <BrowserRouter>
+            <HashRouter>
               <FullScreenContainer>
                 <Router />
               </FullScreenContainer>
-            </BrowserRouter>
+            </HashRouter>
           </Provider>
         </PersistGate>
       </QueryClientProvider>
